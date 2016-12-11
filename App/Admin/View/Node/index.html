@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <include file="Public/h/head.html" title="节点管理" main="" key=""/>
+</head>
+
+<body class="overflow-hidden">
+<div class="wrapper preload">
+    <!--顶栏-->
+    <include file="Public/h/nav.html"/>
+
+    <!-- 菜单 -->
+    <include file="Public/h/menu.html"/>
+
+    <!--主要内容-->
+    <div class="main-container">
+        <div class="padding-md">
+            <!--标题-->
+            <div class="jw-box">
+                <div class="page-title text-primary">
+                    <b>节点管理</b>
+                </div>
+            </div>
+            <div class="jw-box">
+                <form>
+                    <input type="text" name="name" placeholder="名称">
+                    <input type="text" name="mod" placeholder="模块">
+                    <input type="text" name="con" placeholder="控制器">
+                    <input type="text" name="act" placeholder="操作">
+                    <button>搜索</button>
+                </form>
+            </div>
+            <div class="jw-box">
+                <table class="table table-bordered table-hover">
+                    <tr>
+                        <th>#</th>
+                        <th>节点名称</th>
+                        <th>模块</th>
+                        <th>控制器</th>
+                        <th>操作点</th>
+                        <th>操作</th>
+                    </tr>
+                    <foreach name="node" item="vo">
+                        <tr>
+                            <td><{$vo.id}></td>
+                            <td><{$vo.name}></td>
+                            <td><{$vo.module}></td>
+                            <td><{$vo.controller}></td>
+                            <td><{$vo.action}></td>
+                            <td>
+                                删除
+                                修改
+                            </td>
+                        </tr>
+                    </foreach>
+                </table>
+            </div>
+            <!--导入分页-->
+            <include file="Public/h/page.html"/>
+        </div><!-- ./padding-md -->
+    </div><!-- /main-container -->
+
+    <include file="Public/h/foot.html"/>
+</div><!-- /wrapper -->
+<a href="#" class="scroll-to-top hidden-print"><i class="fa fa-chevron-up fa-lg"></i></a>
+<include file="Public/h/js.html"/>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!-- Jquery -->
+<script src="__PUBLIC__/js/jquery-1.11.1.min.js"></script>
+<!--<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>-->
+<!-- Bootstrap -->
+<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+<!-- Slimscroll平滑滚动 -->
+<script src='__PUBLIC__/js/jquery.slimscroll.min.js'></script>
+<!-- Datepicker时间选择 -->
+<script src='__PUBLIC__/js/datepicker.js'></script>
+<!-- Sortable -->
+<script src='__PUBLIC__/js/jquery.sortable.js'></script>
+<!-- Simplify -->
+<script src="__PUBLIC__/js/simplify.js"></script>
+<script>
+    setInterval(function () {
+        $.ajax({
+            url:'__CONTROLLER__/alive',
+            type:'get',
+            success:function (msg) {
+                console.log(msg);
+            }
+        });
+    },600000)
+</script>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <include file="Public/h/head.html" title="日志管理" main="" key=""/>
+</head>
+
+<body class="overflow-hidden">
+<div class="wrapper preload">
+    <!--顶栏-->
+    <include file="Public/h/nav.html"/>
+
+    <!-- 菜单 -->
+    <include file="Public/h/menu.html"/>
+
+    <!--主要内容-->
+    <div class="main-container">
+        <div class="padding-md">
+            <!--标题-->
+            <div class="jw-box">
+                <div class="page-title text-primary">
+                    <b>日志管理</b>
+                </div>
+            </div>
+            <div class="jw-box">
+                <form>
+                    <input type="text" name="id" placeholder="ID">
+                    <input type="text" name="uid" placeholder="用户ID">
+                    <input type="text" name="ip" placeholder="IP">
+                    <input type="text" name="key" placeholder="记录值">
+                    <button>筛选</button>
+                </form>
+            </div>
+            <div class="jw-box">
+                <table class="table table-bordered table-hover">
+                    <tr>
+                        <th>#</th>
+                        <th>类型</th>
+                        <th>用户(ID)</th>
+                        <th>位置</th>
+                        <th>IP</th>
+                        <th>记录</th>
+                        <th>时间</th>
+                    </tr>
+                    <foreach name="log" item="vo">
+                        <tr>
+                            <td><{$vo.id}></td>
+                            <td><{$vo.type}></td>
+                            <td><{$vo.user_id}></td>
+                            <td><{$vo.action}></td>
+                            <td><{$vo.ip}></td>
+                            <td><{$vo.other}></td>
+                            <td><{$vo.createtime}></td>
+                        </tr>
+                    </foreach>
+                </table>
+            </div>
+            <!--导入分页-->
+            <include file="Public/h/page.html"/>
+        </div><!-- ./padding-md -->
+    </div><!-- /main-container -->
+
+    <include file="Public/h/foot.html"/>
+</div><!-- /wrapper -->
+<a href="#" class="scroll-to-top hidden-print"><i class="fa fa-chevron-up fa-lg"></i></a>
+<include file="Public/h/js.html"/>
+</body>
+</html>

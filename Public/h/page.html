@@ -1,0 +1,17 @@
+<div class="jw-box text-center">
+    <form>
+        <foreach name="pages" item="vo">
+            <if condition="$vo.page eq -1">
+                <a class="btn btn-success btn-sm" href="<{$vo.link}>">上一页</a>
+                <elseif condition="$vo.page eq -2"/>
+                <a class="btn btn-success btn-sm" href="<{$vo.link}>">下一页</a>
+                <else/>
+                <a class="btn btn-success btn-sm" href="<{$vo.link}>"><{$vo.page}></a>
+            </if>
+
+        </foreach>
+        <input type="text" name="p" style="width:60px" placeholder="页码">
+        <button class="btn btn-success btn-sm">跳转</button>
+        <span>共<{$page_count}>页，当前第<{$current_page}>页</span>
+    </form>
+</div>

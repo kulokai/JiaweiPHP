@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <include file="Public/h/head.html" title="菜单管理" main="" key=""/>
+</head>
+
+<body class="overflow-hidden">
+<div class="wrapper preload">
+    <!--顶栏-->
+    <include file="Public/h/nav.html"/>
+
+    <!-- 菜单 -->
+    <include file="Public/h/menu.html"/>
+
+    <!--主要内容-->
+    <div class="main-container">
+        <div class="padding-md">
+            <!--标题-->
+            <div class="jw-box">
+                <div class="page-title text-primary">
+                    <b>菜单管理</b>
+                </div>
+            </div>
+            <div class="jw-box">
+                <form>
+                    <input type="text" name="name" placeholder="名称">
+                    <input type="text" name="url" placeholder="节点">
+                    <button>搜索</button>
+                </form>
+            </div>
+            <div class="jw-box">
+                <table class="table table-bordered table-hover">
+                    <tr>
+                        <th>#</th>
+                        <th>菜单名称</th>
+                        <th>节点位置</th>
+                        <th>icon</th>
+                        <th>级数</th>
+                        <th>父级菜单(ID)</th>
+                        <th>操作</th>
+                    </tr>
+                    <foreach name="menu" item="vo">
+                        <tr>
+                            <td><{$vo.id}></td>
+                            <td><{$vo.name}></td>
+                            <td><{$vo.url}></td>
+                            <td><i class="fa fa-<{$vo.icon}>"></i> <{$vo.icon}></td>
+                            <td><{$vo.type}></td>
+                            <td><{$vo.parent_id}></td>
+                            <td>
+                                删除
+                                修改
+                            </td>
+                        </tr>
+                    </foreach>
+                </table>
+            </div>
+            <!--导入分页-->
+            <include file="Public/h/page.html"/>
+        </div><!-- ./padding-md -->
+    </div><!-- /main-container -->
+
+    <include file="Public/h/foot.html"/>
+</div><!-- /wrapper -->
+<a href="#" class="scroll-to-top hidden-print"><i class="fa fa-chevron-up fa-lg"></i></a>
+<include file="Public/h/js.html"/>
+</body>
+</html>

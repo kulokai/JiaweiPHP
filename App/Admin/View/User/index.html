@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <include file="Public/h/head.html" title="账号管理" main="" key=""/>
+</head>
+
+<body class="overflow-hidden">
+<div class="wrapper preload">
+    <!--顶栏-->
+    <include file="Public/h/nav.html"/>
+
+    <!-- 菜单 -->
+    <include file="Public/h/menu.html"/>
+
+    <!--主要内容-->
+    <div class="main-container">
+        <div class="padding-md">
+            <!--标题-->
+            <div class="jw-box">
+                <div class="page-title text-primary">
+                    <b>账号管理</b>
+                </div>
+            </div>
+            <div class="jw-box">
+                <form>
+                    <input type="text" name="name" placeholder="姓名">
+                    <input type="text" name="uname" placeholder="账号">
+                    <button>搜索</button>
+                </form>
+            </div>
+            <div class="jw-box">
+                <table class="table table-bordered table-hover">
+                    <tr>
+                        <th>#</th>
+                        <th>姓名</th>
+                        <th>账号</th>
+                        <th>最后IP</th>
+                        <th>创建时间</th>
+                        <th>操作</th>
+                    </tr>
+                    <foreach name="user" item="vo">
+                        <tr>
+                            <td><{$vo.id}></td>
+                            <td><{$vo.name}></td>
+                            <td><{$vo.username}></td>
+                            <td><{$vo.last_login_ip}></td>
+                            <td><{$vo.create_time}></td>
+                            <td>
+                                删除
+                                修改
+                            </td>
+                        </tr>
+                    </foreach>
+                </table>
+            </div>
+            <!--导入分页-->
+            <include file="Public/h/page.html"/>
+        </div><!-- ./padding-md -->
+    </div><!-- /main-container -->
+
+    <include file="Public/h/foot.html"/>
+</div><!-- /wrapper -->
+<a href="#" class="scroll-to-top hidden-print"><i class="fa fa-chevron-up fa-lg"></i></a>
+<include file="Public/h/js.html"/>
+</body>
+</html>
