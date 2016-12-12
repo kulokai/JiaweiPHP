@@ -16,4 +16,16 @@ class UserController extends AdminController {
 		$this->display();
 	}
 
+	public function del($id){
+		$User = M('User');
+		if($id==1){
+			$this->error('该用户不允许删除');
+		}
+		if($User->where(array('id'=>$id))->save(array('status'=>0))){
+			$this->success('删除成功');
+		}else{
+			$this->error('删除失败');
+		}
+	}
+
 }
