@@ -98,12 +98,17 @@ class AdminController extends BaseController {
 	}
 
 	//通用删除
-	public function del_adapt($ModelName,$id){
+	public function del_adapt($ModelName,$id,$is_true_delete=true){
 		$Model = M($ModelName);
 		if($id==1){
 			$this->error('该用户不允许删除');
 		}
-		if($Model->where(array('id'=>$id))->delete()){
+		if($is_true_delete){
+			$res = $Model->where(array('id'=>$id))->delete();
+		}else{
+			$res = $Model->where(array('id'=>$id))->save(array('status'=>0));
+		}
+		if($res){
 			$this->success('删除成功');
 		}else{
 			$this->error('删除失败');
