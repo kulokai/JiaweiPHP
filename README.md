@@ -19,7 +19,7 @@
 
 ## 界面效果
 后台界面
-(document/img/role.png)
+![后台界面](document/img/role.png)
 
 
 ## 功能方法调用
