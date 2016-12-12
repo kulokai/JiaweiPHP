@@ -13901,3 +13901,332 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000594s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000638s ]
 
+[ 2016-12-11T17:00:48+08:00 ] ::1 /Snow_php_admin_framework/index.php/Admin/Role/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000817s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001100s ]
+SQL: SHOW COLUMNS FROM `jw_php_user` [ RunTime:0.0572s ]
+SQL: SELECT `role_id` FROM `jw_php_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `jw_php_role_node` [ RunTime:0.0067s ]
+SQL: SELECT * FROM jw_php_role_node rn,jw_php_node n WHERE (  n.id=rn.node_id and rn.role_id = 1 and n.module='Admin' and controller='Role' and action='index' )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `jw_php_role_menu` [ RunTime:0.0075s ]
+SQL: SELECT m.id,`type`,`name`,`icon`,`url`,`parent_id` FROM jw_php_role_menu rm,jw_php_menu m WHERE ( m.id=rm.menu_id and rm.role_id=1 )  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: subs E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 57 行.
+NOTIC: [8] Undefined index: subs E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 57 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 57 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 71 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 73 行.
+NOTIC: [8] Undefined index: subs E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 78 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 71 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 73 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 71 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 73 行.
+NOTIC: [8] Undefined index: subs E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 78 行.
+NOTIC: [8] Undefined index: name E:\A\b\Snow_php_admin_framework\App\Admin\Controller\RoleController.class.php 第 7 行.
+NOTIC: [8] Undefined index: short E:\A\b\Snow_php_admin_framework\App\Admin\Controller\RoleController.class.php 第 10 行.
+NOTIC: [8] Undefined variable: where E:\A\b\Snow_php_admin_framework\App\Admin\Controller\RoleController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `jw_php_role` [ RunTime:0.0078s ]
+NOTIC: [8] Undefined index: p E:\A\b\Snow_php_admin_framework\App\Common\Controller\BaseController.class.php 第 62 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jw_php_role` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`name`,`short` FROM `jw_php_role` LIMIT 0,30   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+NOTIC: [8] Undefined variable: man_info E:\A\b\Snow_php_admin_framework\App\Runtime\Cache\Admin\a0a7524eab22c3693baad75fbdbe707e.php 第 44 行.
+NOTIC: [8] Undefined variable: man_info E:\A\b\Snow_php_admin_framework\App\Runtime\Cache\Admin\a0a7524eab22c3693baad75fbdbe707e.php 第 46 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012847s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012907s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000558s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000641s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000686s ]
+
+[ 2016-12-11T17:00:49+08:00 ] ::1 /Snow_php_admin_framework/index.php/Admin/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000525s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000684s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+SQL: SHOW COLUMNS FROM `jw_php_user` [ RunTime:0.0071s ]
+SQL: SELECT `role_id` FROM `jw_php_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `jw_php_role_node` [ RunTime:0.0069s ]
+SQL: SELECT * FROM jw_php_role_node rn,jw_php_node n WHERE (  n.id=rn.node_id and rn.role_id = 1 and n.module='Admin' and controller='User' and action='index' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `jw_php_role_menu` [ RunTime:0.0083s ]
+SQL: SELECT m.id,`type`,`name`,`icon`,`url`,`parent_id` FROM jw_php_role_menu rm,jw_php_menu m WHERE ( m.id=rm.menu_id and rm.role_id=1 )  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 57 行.
+NOTIC: [8] Undefined index: subs E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 57 行.
+NOTIC: [8] Undefined index: subs E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 57 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 71 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 73 行.
+NOTIC: [8] Undefined index: subs E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 78 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 71 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 73 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 71 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 73 行.
+NOTIC: [8] Undefined index: subs E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 78 行.
+NOTIC: [8] Undefined index: name E:\A\b\Snow_php_admin_framework\App\Admin\Controller\UserController.class.php 第 8 行.
+NOTIC: [8] Undefined index: uname E:\A\b\Snow_php_admin_framework\App\Admin\Controller\UserController.class.php 第 11 行.
+NOTIC: [8] Undefined variable: where E:\A\b\Snow_php_admin_framework\App\Admin\Controller\UserController.class.php 第 14 行.
+SQL: SHOW COLUMNS FROM `jw_php_user` [ RunTime:0.0078s ]
+NOTIC: [8] Undefined index: p E:\A\b\Snow_php_admin_framework\App\Common\Controller\BaseController.class.php 第 62 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jw_php_user` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `jw_php_user` LIMIT 0,30   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+NOTIC: [8] Undefined variable: man_info E:\A\b\Snow_php_admin_framework\App\Runtime\Cache\Admin\4295d5db477f3199c8db51638416159f.php 第 44 行.
+NOTIC: [8] Undefined variable: man_info E:\A\b\Snow_php_admin_framework\App\Runtime\Cache\Admin\4295d5db477f3199c8db51638416159f.php 第 46 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012475s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012540s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000605s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000714s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000782s ]
+
+[ 2016-12-11T17:00:51+08:00 ] ::1 /Snow_php_admin_framework/index.php/Admin/Node/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001189s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000944s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001041s ]
+SQL: SHOW COLUMNS FROM `jw_php_user` [ RunTime:0.0078s ]
+SQL: SELECT `role_id` FROM `jw_php_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `jw_php_role_node` [ RunTime:0.0058s ]
+SQL: SELECT * FROM jw_php_role_node rn,jw_php_node n WHERE (  n.id=rn.node_id and rn.role_id = 1 and n.module='Admin' and controller='Node' and action='index' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `jw_php_role_menu` [ RunTime:0.0071s ]
+SQL: SELECT m.id,`type`,`name`,`icon`,`url`,`parent_id` FROM jw_php_role_menu rm,jw_php_menu m WHERE ( m.id=rm.menu_id and rm.role_id=1 )  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 57 行.
+NOTIC: [8] Undefined index: subs E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 63 行.
+NOTIC: [8] Undefined index: subs E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 57 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 57 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 71 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 73 行.
+NOTIC: [8] Undefined index: subs E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 78 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 71 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 73 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 71 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 73 行.
+NOTIC: [8] Undefined index: subs E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 78 行.
+NOTIC: [8] Undefined index: id E:\A\b\Snow_php_admin_framework\App\Admin\Controller\NodeController.class.php 第 7 行.
+NOTIC: [8] Undefined index: mod E:\A\b\Snow_php_admin_framework\App\Admin\Controller\NodeController.class.php 第 10 行.
+NOTIC: [8] Undefined index: con E:\A\b\Snow_php_admin_framework\App\Admin\Controller\NodeController.class.php 第 13 行.
+NOTIC: [8] Undefined index: act E:\A\b\Snow_php_admin_framework\App\Admin\Controller\NodeController.class.php 第 16 行.
+NOTIC: [8] Undefined variable: where E:\A\b\Snow_php_admin_framework\App\Admin\Controller\NodeController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `jw_php_node` [ RunTime:0.0064s ]
+NOTIC: [8] Undefined index: p E:\A\b\Snow_php_admin_framework\App\Common\Controller\BaseController.class.php 第 62 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jw_php_node` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`name`,`module`,`controller`,`action` FROM `jw_php_node` LIMIT 0,30   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+NOTIC: [8] Undefined variable: man_info E:\A\b\Snow_php_admin_framework\App\Runtime\Cache\Admin\f5d9020a722c182cb3cb2a19ed19b4d3.php 第 44 行.
+NOTIC: [8] Undefined variable: man_info E:\A\b\Snow_php_admin_framework\App\Runtime\Cache\Admin\f5d9020a722c182cb3cb2a19ed19b4d3.php 第 46 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011377s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011425s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000515s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000679s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000745s ]
+
+[ 2016-12-11T17:00:52+08:00 ] ::1 /Snow_php_admin_framework/index.php/Admin/Menu/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000537s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000639s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000694s ]
+SQL: SHOW COLUMNS FROM `jw_php_user` [ RunTime:0.0245s ]
+SQL: SELECT `role_id` FROM `jw_php_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `jw_php_role_node` [ RunTime:0.0067s ]
+SQL: SELECT * FROM jw_php_role_node rn,jw_php_node n WHERE (  n.id=rn.node_id and rn.role_id = 1 and n.module='Admin' and controller='Menu' and action='index' )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `jw_php_role_menu` [ RunTime:0.0070s ]
+SQL: SELECT m.id,`type`,`name`,`icon`,`url`,`parent_id` FROM jw_php_role_menu rm,jw_php_menu m WHERE ( m.id=rm.menu_id and rm.role_id=1 )  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 57 行.
+NOTIC: [8] Undefined index: subs E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 57 行.
+NOTIC: [8] Undefined index: subs E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 57 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 71 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 73 行.
+NOTIC: [8] Undefined index: subs E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 78 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 71 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 73 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 71 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 73 行.
+NOTIC: [8] Undefined index: subs E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 78 行.
+NOTIC: [8] Undefined index: name E:\A\b\Snow_php_admin_framework\App\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [8] Undefined index: url E:\A\b\Snow_php_admin_framework\App\Admin\Controller\MenuController.class.php 第 10 行.
+NOTIC: [8] Undefined variable: where E:\A\b\Snow_php_admin_framework\App\Admin\Controller\MenuController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `jw_php_menu` [ RunTime:0.0067s ]
+NOTIC: [8] Undefined index: p E:\A\b\Snow_php_admin_framework\App\Common\Controller\BaseController.class.php 第 62 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jw_php_menu` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jw_php_menu` LIMIT 0,30   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+NOTIC: [8] Undefined variable: man_info E:\A\b\Snow_php_admin_framework\App\Runtime\Cache\Admin\5a1d71dcf039f1b3725a8d8d96ae9d91.php 第 44 行.
+NOTIC: [8] Undefined variable: man_info E:\A\b\Snow_php_admin_framework\App\Runtime\Cache\Admin\5a1d71dcf039f1b3725a8d8d96ae9d91.php 第 46 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011560s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011611s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000775s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000840s ]
+
+[ 2016-12-11T17:00:53+08:00 ] ::1 /Snow_php_admin_framework/index.php/Admin/Log/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000669s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000741s ]
+SQL: SHOW COLUMNS FROM `jw_php_user` [ RunTime:0.0073s ]
+SQL: SELECT `role_id` FROM `jw_php_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `jw_php_role_node` [ RunTime:0.0081s ]
+SQL: SELECT * FROM jw_php_role_node rn,jw_php_node n WHERE (  n.id=rn.node_id and rn.role_id = 1 and n.module='Admin' and controller='Log' and action='index' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `jw_php_role_menu` [ RunTime:0.0061s ]
+SQL: SELECT m.id,`type`,`name`,`icon`,`url`,`parent_id` FROM jw_php_role_menu rm,jw_php_menu m WHERE ( m.id=rm.menu_id and rm.role_id=1 )  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 57 行.
+NOTIC: [8] Undefined index: subs E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 57 行.
+NOTIC: [8] Undefined index: subs E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 63 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 57 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 57 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 71 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 73 行.
+NOTIC: [8] Undefined index: subs E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 78 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 71 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 73 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 71 行.
+NOTIC: [8] Undefined index: active E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 73 行.
+NOTIC: [8] Undefined index: subs E:\A\b\Snow_php_admin_framework\App\Admin\Controller\AdminController.class.php 第 78 行.
+NOTIC: [8] Undefined index: id E:\A\b\Snow_php_admin_framework\App\Admin\Controller\LogController.class.php 第 8 行.
+NOTIC: [8] Undefined index: uid E:\A\b\Snow_php_admin_framework\App\Admin\Controller\LogController.class.php 第 11 行.
+NOTIC: [8] Undefined index: ip E:\A\b\Snow_php_admin_framework\App\Admin\Controller\LogController.class.php 第 14 行.
+NOTIC: [8] Undefined index: key E:\A\b\Snow_php_admin_framework\App\Admin\Controller\LogController.class.php 第 17 行.
+NOTIC: [8] Undefined variable: where E:\A\b\Snow_php_admin_framework\App\Admin\Controller\LogController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `jw_php_log` [ RunTime:0.0068s ]
+NOTIC: [8] Undefined index: p E:\A\b\Snow_php_admin_framework\App\Common\Controller\BaseController.class.php 第 62 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `jw_php_log` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jw_php_log` ORDER BY id desc LIMIT 0,30   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+NOTIC: [8] Undefined variable: man_info E:\A\b\Snow_php_admin_framework\App\Runtime\Cache\Admin\2c8fe2f7e858adea21f43263b1020cf5.php 第 44 行.
+NOTIC: [8] Undefined variable: man_info E:\A\b\Snow_php_admin_framework\App\Runtime\Cache\Admin\2c8fe2f7e858adea21f43263b1020cf5.php 第 46 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011890s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011938s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000505s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000547s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000666s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000719s ]
+
+[ 2016-12-11T17:10:55+08:00 ] ::1 /Snow_php_admin_framework/index.php/Admin/Log/alive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000986s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001141s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001246s ]
+SQL: SHOW COLUMNS FROM `jw_php_user` [ RunTime:0.0094s ]
+SQL: SELECT `role_id` FROM `jw_php_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `jw_php_role_node` [ RunTime:0.0064s ]
+SQL: SELECT * FROM jw_php_role_node rn,jw_php_node n WHERE (  n.id=rn.node_id and rn.role_id = 1 and n.module='Admin' and controller='Log' and action='alive' )  [ RunTime:0.0005s ]
+
+[ 2016-12-11T17:20:55+08:00 ] ::1 /Snow_php_admin_framework/index.php/Admin/Log/alive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000713s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000713s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000775s ]
+SQL: SHOW COLUMNS FROM `jw_php_user` [ RunTime:0.1218s ]
+SQL: SELECT `role_id` FROM `jw_php_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `jw_php_role_node` [ RunTime:0.0528s ]
+SQL: SELECT * FROM jw_php_role_node rn,jw_php_node n WHERE (  n.id=rn.node_id and rn.role_id = 1 and n.module='Admin' and controller='Log' and action='alive' )  [ RunTime:0.0005s ]
+
+[ 2016-12-11T17:30:54+08:00 ] ::1 /Snow_php_admin_framework/index.php/Admin/Log/alive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000633s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000799s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000851s ]
+SQL: SHOW COLUMNS FROM `jw_php_user` [ RunTime:0.0073s ]
+SQL: SELECT `role_id` FROM `jw_php_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `jw_php_role_node` [ RunTime:0.0058s ]
+SQL: SELECT * FROM jw_php_role_node rn,jw_php_node n WHERE (  n.id=rn.node_id and rn.role_id = 1 and n.module='Admin' and controller='Log' and action='alive' )  [ RunTime:0.0005s ]
+
+[ 2016-12-11T19:00:54+08:00 ] ::1 /Snow_php_admin_framework/index.php/Admin/Log/alive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000678s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000860s ]
+SQL: SHOW COLUMNS FROM `jw_php_user` [ RunTime:0.0078s ]
+SQL: SELECT `role_id` FROM `jw_php_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `jw_php_role_node` [ RunTime:0.0068s ]
+SQL: SELECT * FROM jw_php_role_node rn,jw_php_node n WHERE (  n.id=rn.node_id and rn.role_id = 1 and n.module='Admin' and controller='Log' and action='alive' )  [ RunTime:0.0005s ]
+
+[ 2016-12-11T19:10:55+08:00 ] ::1 /Snow_php_admin_framework/index.php/Admin/Log/alive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000768s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000919s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000990s ]
+SQL: SHOW COLUMNS FROM `jw_php_user` [ RunTime:0.3490s ]
+SQL: SELECT `role_id` FROM `jw_php_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `jw_php_role_node` [ RunTime:0.0118s ]
+SQL: SELECT * FROM jw_php_role_node rn,jw_php_node n WHERE (  n.id=rn.node_id and rn.role_id = 1 and n.module='Admin' and controller='Log' and action='alive' )  [ RunTime:0.0007s ]
+
+[ 2016-12-11T19:20:54+08:00 ] ::1 /Snow_php_admin_framework/index.php/Admin/Log/alive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000732s ]
+SQL: SHOW COLUMNS FROM `jw_php_user` [ RunTime:0.0060s ]
+SQL: SELECT `role_id` FROM `jw_php_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `jw_php_role_node` [ RunTime:0.0062s ]
+SQL: SELECT * FROM jw_php_role_node rn,jw_php_node n WHERE (  n.id=rn.node_id and rn.role_id = 1 and n.module='Admin' and controller='Log' and action='alive' )  [ RunTime:0.0005s ]
+
+[ 2016-12-11T19:30:54+08:00 ] ::1 /Snow_php_admin_framework/index.php/Admin/Log/alive
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000747s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000944s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001037s ]
+SQL: SHOW COLUMNS FROM `jw_php_user` [ RunTime:0.0073s ]
+SQL: SELECT `role_id` FROM `jw_php_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `jw_php_role_node` [ RunTime:0.0060s ]
+SQL: SELECT * FROM jw_php_role_node rn,jw_php_node n WHERE (  n.id=rn.node_id and rn.role_id = 1 and n.module='Admin' and controller='Log' and action='alive' )  [ RunTime:0.0005s ]
+
