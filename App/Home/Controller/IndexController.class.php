@@ -24,7 +24,7 @@ class IndexController extends BaseController {
     	$backUrl = $_GET['back'];
 
     	$User = M('User');
-	    $user = $User->field('id,username,name,password')->where(array('username'=>$username))->find();
+	    $user = $User->field('id,username,name,password')->where(array('username'=>$username,'status'=>1))->find();
 	    if(!$user){
 	    	$this->error('不存在的用户账户');
 	    }

@@ -75,6 +75,7 @@
                         <th>姓名</th>
                         <th>账号</th>
                         <th>最后IP</th>
+                        <th>角色</th>
                         <th>创建时间</th>
                         <th>操作</th>
                     </tr>
@@ -83,6 +84,7 @@
                             <td><?php echo ($vo["name"]); ?></td>
                             <td><?php echo ($vo["username"]); ?></td>
                             <td><?php echo ($vo["last_login_ip"]); ?></td>
+                            <td><?php echo ($vo["role_name"]); ?></td>
                             <td><?php echo ($vo["create_time"]); ?></td>
                             <td>
                                 删除
