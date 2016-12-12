@@ -11,7 +11,7 @@ class UserController extends AdminController {
 		if($_GET['uname']){
 			$where['username'] = array('like',"%{$_GET['uname']}%");
 		}
-		$role = $this->page('User',30,null,$where);
+		$role = $this->page('UserView',30,null,$where);
 		$this->assign('user',$role);
 		$this->display();
 	}
