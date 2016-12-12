@@ -96,4 +96,17 @@ class AdminController extends BaseController {
 		$this->assign('menu_html',$menu_html);
 //		exit;
 	}
+
+	//通用删除
+	public function del_adapt($ModelName,$id){
+		$Model = M($ModelName);
+		if($id==1){
+			$this->error('该用户不允许删除');
+		}
+		if($Model->where(array('id'=>$id))->delete()){
+			$this->success('删除成功');
+		}else{
+			$this->error('删除失败');
+		}
+	}
 }
