@@ -22,7 +22,7 @@ class NodeController extends AdminController {
 	}
 
 	public function del($id){
-		$this->del_adapt('Node',$id,false);
+		$this->del_adapt('Node',$id);
 	}
 
 }

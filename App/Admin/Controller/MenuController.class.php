@@ -16,7 +16,7 @@ class MenuController extends AdminController {
 	}
 
 	public function del($id){
-		$this->del_adapt('Menu',$id,false);
+		$this->del_adapt('Menu',$id);
 	}
 
 }
