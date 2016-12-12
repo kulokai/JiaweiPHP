@@ -1,0 +1,24 @@
+<!--删除提醒-->
+<div class="modal fade" id="del-mb">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">提示</h4>
+            </div>
+            <div class="modal-body">
+                <p>你确定删除该用户？</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <a id="sure-del-btn" class="btn btn-primary">非常确定</a>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script>
+    function delTip($id) {
+        $('#sure-del-btn').attr('href','__CONTROLLER__/del/id/'+$id);
+        $('#del-mb').modal();
+    }
+</script>

@@ -48,7 +48,7 @@
                             <td><{$vo.type}></td>
                             <td><{$vo.parent_id}></td>
                             <td>
-                                删除
+                                <a class="text-danger" onclick="delTip('<{$vo.id}>')">删除</a>
                                 修改
                             </td>
                         </tr>
@@ -61,6 +61,7 @@
     </div><!-- /main-container -->
 
     <include file="Public/h/foot.html"/>
+    <include file="Public/h/del_modal.html"/>
 </div><!-- /wrapper -->
 <a href="#" class="scroll-to-top hidden-print"><i class="fa fa-chevron-up fa-lg"></i></a>
 <include file="Public/h/js.html"/>
