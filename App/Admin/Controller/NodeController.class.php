@@ -21,4 +21,8 @@ class NodeController extends AdminController {
 		$this->display();
 	}
 
+	public function del($id){
+		$this->del_adapt('Node',$id,false);
+	}
+
 }

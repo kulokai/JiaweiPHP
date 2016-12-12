@@ -15,4 +15,8 @@ class RoleController extends AdminController {
     	$this->display();
     }
 
+	public function del($id){
+		$this->del_adapt('Role',$id,false);
+	}
+
 }
