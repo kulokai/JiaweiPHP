@@ -101,7 +101,7 @@ class AdminController extends BaseController {
 	public function del_adapt($ModelName,$id,$is_true_delete=true){
 		$Model = M($ModelName);
 		if($id==1){
-			$this->error('该用户不允许删除');
+			$this->error('该项目不允许删除');
 		}
 		if($is_true_delete){
 			$res = $Model->where(array('id'=>$id))->delete();
