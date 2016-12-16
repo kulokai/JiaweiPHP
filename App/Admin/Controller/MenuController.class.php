@@ -32,6 +32,7 @@ class MenuController extends AdminController {
 			unset($data['parent_id']);
 		}
 		$data['create_time'] = date('Y-m-d H:i:s');
+		dump($data);
 		if($Menu->add($data)){
 			$this->success('成功添加');
 		}else{
