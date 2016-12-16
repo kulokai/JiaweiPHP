@@ -20,8 +20,9 @@ class AdminController extends BaseController {
 		$user = $User->field('role_id')->find($theUser['id']);
 
 		//检查角色权限
+		$DB_PREFIX = C('DB_PREFIX');
 		$model = new \Think\Model();
-		$is_node_allow = $model->table('jw_php_role_node rn,jw_php_node n')
+		$is_node_allow = $model->table($DB_PREFIX.'role_node rn,'.$DB_PREFIX.'node n')
 			->where(" n.id=rn.node_id and rn.role_id = {$user['role_id']} and n.module='"
 				.MODULE_NAME."' and controller='".CONTROLLER_NAME."' and action='".ACTION_NAME."'")
 			->select();
@@ -32,8 +33,9 @@ class AdminController extends BaseController {
 		//处理角色菜单
 		$menus = $model
 			->field('m.id,type,name,icon,url,parent_id')
-			->table('jw_php_role_menu rm,jw_php_menu m')
+			->table($DB_PREFIX.'role_menu rm,'.$DB_PREFIX.'menu m')
 			->where('m.id=rm.menu_id and rm.role_id='.$user['role_id'])
+			->order('sort desc')
 			->select();
 //		dump($menus);
 		$arr = array();
