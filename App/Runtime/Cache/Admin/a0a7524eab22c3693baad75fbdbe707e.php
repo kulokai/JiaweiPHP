@@ -121,7 +121,7 @@
                 <h4 class="modal-title">提示</h4>
             </div>
             <div class="modal-body">
-                <p>你确定删除该用户？</p>
+                <p>你确定删除该项？</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>

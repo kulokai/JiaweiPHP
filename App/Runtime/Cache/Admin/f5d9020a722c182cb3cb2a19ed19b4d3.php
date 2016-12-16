@@ -87,7 +87,7 @@
                             <td><?php echo ($vo["controller"]); ?></td>
                             <td><?php echo ($vo["action"]); ?></td>
                             <td>
-                                删除
+                                <a class="text-danger" onclick="delTip('<?php echo ($vo["id"]); ?>')">删除</a>
                                 修改
                             </td>
                         </tr><?php endforeach; endif; ?>
@@ -117,6 +117,30 @@
         A PHP Admin Framework By <b>Jiawei</b> 2016.
     </p>
 </footer>
+    <!--删除提醒-->
+<div class="modal fade" id="del-mb">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">提示</h4>
+            </div>
+            <div class="modal-body">
+                <p>你确定删除该项？</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <a id="sure-del-btn" class="btn btn-primary">非常确定</a>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script>
+    function delTip($id) {
+        $('#sure-del-btn').attr('href','/Snow_php_admin_framework/index.php/Admin/Node/del/id/'+$id);
+        $('#del-mb').modal();
+    }
+</script>
 </div><!-- /wrapper -->
 <a href="#" class="scroll-to-top hidden-print"><i class="fa fa-chevron-up fa-lg"></i></a>
 <!-- Jquery -->
