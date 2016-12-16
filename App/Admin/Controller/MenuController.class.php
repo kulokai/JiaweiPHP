@@ -26,13 +26,15 @@ class MenuController extends AdminController {
 	}
 
 	public function add(){
+		if(!IS_POST){
+			$this->error('请求方式错误');
+		}
 		$Menu = D('Menu');
 		$data = $Menu->create();
 		if($data['type']==1){
 			unset($data['parent_id']);
 		}
 		$data['create_time'] = date('Y-m-d H:i:s');
-		dump($data);
 		if($Menu->add($data)){
 			$this->success('成功添加');
 		}else{
