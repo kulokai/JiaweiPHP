@@ -135,7 +135,7 @@
                         <input type="text" name="icon" class="form-control" placeholder="菜单图标" required>
                     </div>
                     <div class="form-group m-bottom-md">
-                        <label>菜单跳转</label>
+                        <label>跳转节点</label>
                         <input type="text" name="url" class="form-control" placeholder="URL网页" required>
                     </div>
                     <div class="form-group m-bottom-md">
