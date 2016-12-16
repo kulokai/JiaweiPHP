@@ -69,6 +69,7 @@
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                     <h4 class="modal-title">新增菜单</h4>
                 </div>
+                <form action="__CONTROLLER__/add" method="post">
                 <div class="modal-body">
                     <div class="form-group m-bottom-md">
                         <label>菜单级数</label>
@@ -104,8 +105,9 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <a id="sure-del-btn" class="btn btn-primary">非常确定</a>
+                    <button class="btn btn-primary">非常确定</button>
                 </div>
+                </form>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->

@@ -25,4 +25,10 @@ class MenuController extends AdminController {
 		$this->del_adapt('Menu',$id);
 	}
 
+	public function add(){
+		$Menu = D('Menu');
+		$data = $Menu->create();
+		dump($data);
+	}
+
 }
