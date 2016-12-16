@@ -10,7 +10,13 @@ class MenuController extends AdminController {
 		if($_GET['url']){
 			$where['url'] = array('like',"%{$_GET['url']}%");
 		}
+
+		$Menu = M('Menu');
+		$menu = $Menu->where(array('type'=>1))->select();
+		$this->assign('menu',$menu);
+
 		$role = $this->page('Menu',30,null,$where);
+
 		$this->assign('menu',$role);
 		$this->display();
 	}
