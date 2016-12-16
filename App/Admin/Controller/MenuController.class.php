@@ -12,7 +12,7 @@ class MenuController extends AdminController {
 		}
 
 		$Menu = M('Menu');
-		$menu = $Menu->where(array('type'=>1))->select();
+		$menu = $Menu->where('type = 1')->select();
 		$this->assign('menu',$menu);
 
 		$role = $this->page('Menu',30,null,$where);
