@@ -66,8 +66,8 @@
                     <input type="text" name="name" placeholder="名称">
                     <input type="text" name="url" placeholder="节点">
                     <button>搜索</button>
+                    <a class="btn btn-sm btn-primary" onclick="$('#add-mb').modal()">新增菜单</a>
                 </form>
-                <a class="btn btn-sm btn-primary" onclick="$('#add-mb').modal()">新增菜单</a>
             </div>
             <div class="jw-box">
                 <table class="table table-bordered table-hover">
