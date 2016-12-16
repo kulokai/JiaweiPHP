@@ -12,7 +12,7 @@ class MenuController extends AdminController {
 		}
 
 		$Menu = M('Menu');
-		$menu = $Menu->where('type = 1')->select(false);
+		$menu = $Menu->where(array('type'=>1))->select();
 		dump($menu);exit;
 		$this->assign('menu',$menu);
 
