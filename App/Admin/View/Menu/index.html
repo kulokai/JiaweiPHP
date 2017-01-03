@@ -182,6 +182,11 @@
     });
 
     $('.change-btn').click(function () {
+        if($(this).data('type')==1){
+            $('.parent_sel:eq(1)').hide();
+        }else{
+            $('.parent_sel:eq(1)').show();
+        }
         $('#type').val($(this).data('type'));
         $('#id').val($(this).data('id'));
         $('#parent_id').val($(this).data('parent_id'));
