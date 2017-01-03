@@ -36,7 +36,7 @@
                         <th>菜单名称</th>
                         <th>节点位置</th>
                         <th>icon</th>
-                        <th>级数</th>
+                        <th>类型</th>
                         <th>父级菜单(ID)</th>
                         <th>操作</th>
                     </tr>
@@ -46,7 +46,7 @@
                             <td><{$vo.name}></td>
                             <td><{$vo.url}></td>
                             <td><i class="fa fa-<{$vo.icon}>"></i> <{$vo.icon}></td>
-                            <td><{$vo.type}></td>
+                            <td><{$vo.type}>菜单</td>
                             <td><{$vo.parent_id}></td>
                             <td>
                                 <a class="text-danger" onclick="delTip('<{$vo.id}>')">删除</a>
@@ -120,7 +120,7 @@
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                     <h4 class="modal-title">修改菜单</h4>
                 </div>
-                <form action="__CONTROLLER__/add" method="post">
+                <form action="__CONTROLLER__/upd" method="post">
                 <div class="modal-body">
                     <div class="form-group m-bottom-md">
                         <label>菜单级数</label>
