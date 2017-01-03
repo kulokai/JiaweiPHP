@@ -49,6 +49,15 @@ class MenuController extends AdminController {
 		$Menu = D('Menu');
 		$data = $Menu->create();
 		dump($data);
+		if($data['type']==1){
+			unset($data['parent_id']);
+		}
+		$data['create_time'] = date('Y-m-d H:i:s');
+		if($Menu->save($data)){
+			$this->success('成功修改');
+		}else{
+			$this->error('失败修改');
+		}
 	}
 
 }
