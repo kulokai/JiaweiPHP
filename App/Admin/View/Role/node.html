@@ -29,10 +29,10 @@
         <div class="jw-box">
             <a class="btn btn-success">全选</a>
             <hr>
-            <foreach name="node" item="vo">
+            <foreach name="node" key="k" item="vo">
                 <div class="item">
-                    <input type="checkbox" <if condition="$vo.checked eq 1">checked="checked"</if>> <{$vo.name}>
-                    <br><{$vo.module}>/<b class="text-danger"><{$vo.controller}></b>/<{$vo.action}>
+                    <input id="cb<{$k}>" type="checkbox" <if condition="$vo.checked eq 1">checked="checked"</if>><label for="cb<{$k}>"> <{$vo.name}>
+                    <br><{$vo.module}>/<b class="text-danger"><{$vo.controller}></b>/<{$vo.action}></label>
                 </div>
             </foreach>
         </div>
