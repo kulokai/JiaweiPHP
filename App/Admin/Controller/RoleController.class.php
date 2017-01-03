@@ -86,4 +86,8 @@ class RoleController extends AdminController {
 		$this->display();
 	}
 
+	public function save($id){
+		dump($_POST);
+	}
+
 }
