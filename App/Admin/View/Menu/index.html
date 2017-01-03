@@ -172,11 +172,11 @@
 <include file="Public/h/js.html"/>
 <script>
     $('.type_sel').change(function () {
-        alert($(this).index('.type_sel'));
+        var index = $(this).index('.type_sel');
         if($(this).val()==1){
-            $('.parent_sel').hide();
+            $('.parent_sel:eq('+index+')').hide();
         }else{
-            $('.parent_sel').show();
+            $('.parent_sel:eq('+index+')').show();
         }
     });
 
