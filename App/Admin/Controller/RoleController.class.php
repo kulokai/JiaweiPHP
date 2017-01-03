@@ -65,7 +65,7 @@ class RoleController extends AdminController {
 				$nodes[$i]['checked'] = 2;
 			}
 		}
-		dump($nodes);exit;
+//		dump($nodes);exit;
 		$this->assign('node',$nodes);
 		$this->display();exit;
 
