@@ -2,6 +2,13 @@
 <html lang="en">
 <head>
     <include file="Public/h/head.html" title="角色权限" main="" key=""/>
+    <style>
+        .item{
+            display: inline-block;
+            padding: 6px 10px;
+            border: 1px solid cornflowerblue;
+        }
+    </style>
 </head>
 
 <body class="overflow-hidden">
@@ -22,7 +29,9 @@
             <a class="btn btn-success">全选</a>
             <hr>
             <foreach name="node" item="vo">
-                <input type="checkbox"> <{$vo.name}>
+                <div class="item">
+                    <input type="checkbox"> <{$vo.name}>
+                </div>
             </foreach>
         </div>
 
