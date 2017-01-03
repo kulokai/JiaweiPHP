@@ -52,6 +52,19 @@ class RoleController extends AdminController {
 
 		$Node = M('Node');
 		$nodes = $Node->select();
+		$RoleNode = M('RoleNode');
+		$isNode = array();
+		$rn = $RoleNode->where(array('role_id'=>$id))->select();
+		foreach($rn as $vo){
+			$isNode[] = $vo['func_id'];
+		}
+		for($i=0;$i<sizeof($nodes);$i++){
+			if(in_array($nodes[$i]['id'],$isNode)){
+				$nodes[$i]['checked'] = 1;
+			}else{
+				$nodes[$i]['checked'] = 2;
+			}
+		}
 		$this->assign('node',$nodes);
 		$this->display();exit;
 
