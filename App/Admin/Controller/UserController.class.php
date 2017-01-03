@@ -29,8 +29,9 @@ class UserController extends AdminController {
 		if(!IS_POST){
 			$this->error('请求方式错误');
 		}
-		$Model = D('Node');
+		$Model = D('User');
 		$data = $Model->create();
+		$data['password'] = md5($data['password']);
 		$data['create_time'] = date('Y-m-d H:i:s');
 		if($Model->add($data)){
 			$this->success('成功添加');
@@ -43,7 +44,7 @@ class UserController extends AdminController {
 		if(!IS_POST){
 			$this->error('请求方式错误');
 		}
-		$Model = D('Node');
+		$Model = D('User');
 		$data = $Model->create();
 		$data['create_time'] = date('Y-m-d H:i:s');
 		if($Model->save($data)){
