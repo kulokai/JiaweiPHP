@@ -38,6 +38,7 @@
                         <th>icon</th>
                         <th>类型</th>
                         <th>父级菜单(ID)</th>
+                        <th>排序</th>
                         <th>操作</th>
                     </tr>
                     <foreach name="menu" item="vo">
@@ -48,9 +49,10 @@
                             <td><i class="fa fa-<{$vo.icon}>"></i> <{$vo.icon}></td>
                             <td><{$vo.type}>菜单</td>
                             <td><{$vo.parent_id}></td>
+                            <td><{$vo.sort}></td>
                             <td>
                                 <a class="text-danger" onclick="delTip('<{$vo.id}>')">删除</a>
-                                <a class="text-primary change-btn">修改</a>
+                                <a class="text-primary change-btn" data-id="<{$vo.id}>" data-name="<{$vo.name}>" data-icon="<{$vo.icon}>" data-url="<{$vo.url}>" data-sort="<{$vo.sort}>" data-type="<{$vo.type}>" data-parent_id="<{$vo.parent_id}>">修改</a>
                             </td>
                         </tr>
                     </foreach>
