@@ -26,6 +26,7 @@
                     <input type="text" name="name" placeholder="姓名">
                     <input type="text" name="uname" placeholder="账号">
                     <button>搜索</button>
+                    <a class="btn btn-sm btn-primary pull-right" onclick="$('#add-mb').modal()">新增账号</a>
                 </form>
             </div>
             <div class="jw-box">
@@ -49,7 +50,7 @@
                             <td><{$vo.create_time}></td>
                             <td>
                                 <a class="text-danger" onclick="delTip('<{$vo.id}>')">删除</a>
-                                修改
+                                <a class="text-primary change-btn" data-id="<{$vo.id}>" data-name="<{$vo.name}>" data-mod="<{$vo.module}>" data-con="<{$vo.controller}>" data-act="<{$vo.action}>">修改</a>
                             </td>
                         </tr>
                     </foreach>
@@ -69,12 +70,90 @@
                     <h4 class="modal-title">提示</h4>
                 </div>
                 <div class="modal-body">
-                    <p>你确定删除该用户？</p>
+                    <p>你确定删除该账号？</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                     <a id="sure-del-btn" class="btn btn-primary">非常确定</a>
                 </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!--新增账号-->
+    <div class="modal fade" id="add-mb">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">新增账号</h4>
+                </div>
+                <form action="__CONTROLLER__/add" method="post">
+                    <div class="modal-body">
+                        <div class="form-group m-bottom-md">
+                            <label>登录账号</label>
+                            <input type="text" name="username" class="form-control" required>
+                        </div>
+                        <div class="form-group m-bottom-md">
+                            <label>姓名</label>
+                            <input type="text" name="name" class="form-control" value="Admin" required>
+                        </div>
+                        <div class="form-group m-bottom-md">
+                            <label>角色</label>
+                            <select name="role_id" class="form-control" required>
+                                <option value="">请选择...</option>
+                                <foreach name="role" item="vo">
+                                    <option value="<{$vo.id}>"><{$vo.name}></option>
+                                </foreach>
+                            </select>
+                        </div>
+                        <div class="form-group m-bottom-md">
+                            <label>密码</label>
+                            <input type="text" name="password" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button class="btn btn-primary">添加账号</button>
+                    </div>
+                </form>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!--修改账号-->
+    <div class="modal fade" id="upd-mb">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">修改账号</h4>
+                </div>
+                <form action="__CONTROLLER__/upd" method="post">
+                    <div class="modal-body">
+                        <div class="form-group m-bottom-md">
+                            <label>账号名称</label>
+                            <input type="hidden" id="id" name="id">
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group m-bottom-md">
+                            <label>模块名称</label>
+                            <input type="text" id="mod" name="module" class="form-control"required>
+                        </div>
+                        <div class="form-group m-bottom-md">
+                            <label>控制器名</label>
+                            <input type="text" id="con" name="controller" class="form-control" required>
+                        </div>
+                        <div class="form-group m-bottom-md">
+                            <label>操作名称</label>
+                            <input type="text" id="act" name="action" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button class="btn btn-primary">修改账号</button>
+                    </div>
+                </form>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
