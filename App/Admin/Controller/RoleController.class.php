@@ -65,53 +65,24 @@ class RoleController extends AdminController {
 				$nodes[$i]['checked'] = 2;
 			}
 		}
-//		dump($nodes);exit;
 		$this->assign('node',$nodes);
-		$this->display();exit;
 
-		$RoleFunc = M('RoleFunc');
-		$rf = $RoleFunc->where(array('role_id'=>$id))->select();
-		$isFunc = array();
-		$isArea1 = array();
-		$isArea2 = array();
-		foreach($rf as $vo){
-			$isFunc[] = $vo['func_id'];
+		$Menu = M('Menu');
+		$menus = $Menu->select();
+		$RoleMenu = M('RoleMenu');
+		$isMenu = array();
+		$rm = $RoleMenu->where(array('role_id'=>$id))->select();
+		foreach($rm as $vo){
+			$isMenu[] = $vo['menu_id'];
 		}
-		for($i=0;$i<sizeof($funcs);$i++){
-			if(in_array($funcs[$i]['id'],$isFunc)){
-				$funcs[$i]['checked'] = 1;
+		for($i=0;$i<sizeof($menus);$i++){
+			if(in_array($menus[$i]['id'],$isMenu)){
+				$menus[$i]['checked'] = 1;
 			}else{
-				$funcs[$i]['checked'] = 0;
+				$menus[$i]['checked'] = 2;
 			}
 		}
-		$this->assign('func',$funcs);
-
-		$Area = M('Area');
-		$areas = $Area->where(array('status'=>1))->select();
-		$Role1 = M('RoleArea');
-		$ra1 = $Role1->where(array('role_id'=>$id))->select();
-		$Role2 = M('RoleAreaAdd');
-		$ra2 = $Role2->where(array('role_id'=>$id))->select();
-		foreach($ra1 as $vo){
-			$isArea1[] = $vo['area_id'];
-		}
-		foreach($ra2 as $vo){
-			$isArea2[] = $vo['area_id'];
-		}
-		for($i=0;$i<sizeof($areas);$i++){
-			if(in_array($areas[$i]['id'],$isArea1)){
-				$areas[$i]['checked1'] = 1;
-			}else{
-				$areas[$i]['checked1'] = 0;
-			}
-			if(in_array($areas[$i]['id'],$isArea2)){
-				$areas[$i]['checked2'] = 1;
-			}else{
-				$areas[$i]['checked2'] = 0;
-			}
-		}
-		$this->assign('area',$areas);
-
+		$this->assign('menu',$menus);
 		$this->display();
 	}
 

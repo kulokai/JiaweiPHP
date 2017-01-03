@@ -40,6 +40,17 @@
             </foreach>
         </div>
 
+        <div class="jw-box">
+            <a class="btn btn-success">全选</a>
+            <hr>
+            <foreach name="menu" key="k" item="vo">
+                <div class="item">
+                    <input id="menu<{$k}>" type="checkbox" <if condition="$vo.checked eq 1">checked="checked"</if>><label for="menu<{$k}>"> <{$vo.name}>
+                    <br><{$vo.url}></label>
+                </div>
+            </foreach>
+        </div>
+
     </div>
 
 
