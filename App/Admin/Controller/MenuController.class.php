@@ -42,4 +42,13 @@ class MenuController extends AdminController {
 		}
 	}
 
+	public function upd(){
+		if(!IS_POST){
+			$this->error('请求方式错误');
+		}
+		$Menu = D('Menu');
+		$data = $Menu->create();
+		dump($data);
+	}
+
 }
