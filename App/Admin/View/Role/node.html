@@ -21,6 +21,9 @@
         <div class="jw-box">
             <a class="btn btn-success">全选</a>
             <hr>
+            <foreach name="node" item="vo">
+                <input type="checkbox"> <{$vo.name}>
+            </foreach>
         </div>
 
     </div>
