@@ -32,7 +32,7 @@
             <foreach name="node" item="vo">
                 <div class="item">
                     <input type="checkbox" <if condition="$vo.checked eq 1">checked="checked"</if>> <{$vo.name}>
-                    <br><{$vo.module}>/<{$vo.controller}>/<{$vo.action}>
+                    <br><{$vo.module}>/<span class="text-primary"><{$vo.controller}></span>/<{$vo.action}>
                 </div>
             </foreach>
         </div>
