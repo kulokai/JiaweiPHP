@@ -104,7 +104,7 @@ class RoleController extends AdminController {
 
 		$RodeNode->startTrans();
 		if($delete){
-			$res1 = $RodeNode->where(array('role_id'=>$id,'func_id'=>array('in',$delete)))->delete();
+			$res1 = $RodeNode->where(array('role_id'=>$id,'node_id'=>array('in',$delete)))->delete();
 			if(!$res1){
 				$RodeNode->rollback();
 				$this->error('node删除错误');
@@ -118,11 +118,43 @@ class RoleController extends AdminController {
 			$res2 = $RodeNode->addAll($insert);
 			if(!$res2){
 				$RodeNode->rollback();
-				$this->error('f新增错误');
+				$this->error('node新增错误');
 			}
 		}
 
+		//菜单权限
+		$menu = array();
+		foreach($_POST['menu'] as $vo){
+			$menu[] = $vo;
+		}
 
+		$RoleMenu = M('RoleMenu');
+		$rm = $RoleMenu->where(array('role_id'=>$id))->select();
+		$isMenu = array();
+		foreach($rm as $vo){
+			$isMenu[] = $vo['menu_id'];
+		}
+		$new1 = array_diff($menu,$isMenu);
+		$delete1 = array_diff($isMenu,$menu);
+
+		if($delete1){
+			$res1 = $RoleMenu->where(array('role_id'=>$id,'menu_id'=>array('in',$delete1)))->delete();
+			if(!$res1){
+				$RodeNode->rollback();
+				$this->error('menu删除错误');
+			}
+		}
+		if($new1){
+			$insert = array();
+			foreach($new1 as $vo){
+				$insert[] = array('role_id'=>$id,'menu_id'=>$vo);
+			}
+			$res2 = $RoleMenu->addAll($insert);
+			if(!$res2){
+				$RodeNode->rollback();
+				$this->error('menu新增错误');
+			}
+		}
 
 
 		$RodeNode->commit();
