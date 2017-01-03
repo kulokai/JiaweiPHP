@@ -34,7 +34,7 @@
             <hr>
             <foreach name="node" key="k" item="vo">
                 <div class="item">
-                    <input id="cb<{$k}>" type="checkbox" <if condition="$vo.checked eq 1">checked="checked"</if>><label for="cb<{$k}>"> <{$vo.name}>
+                    <input id="cb<{$k}>" name="node[]" value="<{$vo.id}>" type="checkbox" <if condition="$vo.checked eq 1">checked="checked"</if>><label for="cb<{$k}>"> <{$vo.name}>
                     <br><{$vo.module}>/<b class="text-danger"><{$vo.controller}></b>/<{$vo.action}></label>
                 </div>
             </foreach>
@@ -45,7 +45,7 @@
             <hr>
             <foreach name="menu" key="k" item="vo">
                 <div class="item">
-                    <input id="menu<{$k}>" type="checkbox" <if condition="$vo.checked eq 1">checked="checked"</if>><label for="menu<{$k}>"> <{$vo.name}>
+                    <input id="menu<{$k}>" name="menu[]" value="<{$vo.id}>" type="checkbox" <if condition="$vo.checked eq 1">checked="checked"</if>><label for="menu<{$k}>"> <{$vo.name}>
                     <br><{$vo.url}></label>
                 </div>
             </foreach>
