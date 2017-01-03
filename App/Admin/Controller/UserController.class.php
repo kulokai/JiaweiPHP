@@ -46,6 +46,9 @@ class UserController extends AdminController {
 		}
 		$Model = D('User');
 		$data = $Model->create();
+		if($data['password']){
+			$data['password'] = md5($data['password']);
+		}
 		$data['update_time'] = date('Y-m-d H:i:s');
 		if($Model->save($data)){
 			$this->success('成功修改');
