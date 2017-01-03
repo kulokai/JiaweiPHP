@@ -51,6 +51,7 @@
                             <td>
                                 <a class="text-danger" onclick="delTip('<{$vo.id}>')">删除</a>
                                 <a class="text-primary change-btn" data-id="<{$vo.id}>" data-name="<{$vo.name}>" data-user="<{$vo.username}>" data-role="<{$vo.role_id}>">修改</a>
+                                <a class="text-success pw" data-id="<{$vo.id}>">密码</a>
                             </td>
                         </tr>
                     </foreach>
@@ -159,6 +160,31 @@
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
+    <!--重置密码-->
+    <div class="modal fade" id="pw-mb">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">重置密码</h4>
+                </div>
+                <form action="__CONTROLLER__/upd" method="post">
+                    <div class="modal-body">
+                        <div class="form-group m-bottom-md">
+                            <label>新密码</label>
+                            <input type="hidden" id="the_id" name="id">
+                            <input type="text" id="pw" name="password" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button class="btn btn-primary">重置密码</button>
+                    </div>
+                </form>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
     <include file="Public/h/foot.html"/>
 </div><!-- /wrapper -->
 <a href="#" class="scroll-to-top hidden-print"><i class="fa fa-chevron-up fa-lg"></i></a>
@@ -174,6 +200,10 @@
         $('#user').val($(this).data('user'));
         $('#role').val($(this).data('role'));
         $('#upd-mb').modal();
+    });
+    $('.pw').click(function () {
+        $('#the_id').val($(this).data('id'));
+        $('#pw-mb').modal();
     });
 </script>
 </body>
