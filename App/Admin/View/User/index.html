@@ -50,7 +50,7 @@
                             <td><{$vo.create_time}></td>
                             <td>
                                 <a class="text-danger" onclick="delTip('<{$vo.id}>')">删除</a>
-                                <a class="text-primary change-btn" data-id="<{$vo.id}>" data-name="<{$vo.name}>" data-mod="<{$vo.module}>" data-con="<{$vo.controller}>" data-act="<{$vo.action}>">修改</a>
+                                <a class="text-primary change-btn" data-id="<{$vo.id}>" data-name="<{$vo.name}>" data-user="<{$vo.username}>" data-role="<{$vo.role_id}>">修改</a>
                             </td>
                         </tr>
                     </foreach>
@@ -132,21 +132,22 @@
                 <form action="__CONTROLLER__/upd" method="post">
                     <div class="modal-body">
                         <div class="form-group m-bottom-md">
-                            <label>账号名称</label>
+                            <label>登录账号</label>
                             <input type="hidden" id="id" name="id">
+                            <input type="text" id="user" name="username" class="form-control" required>
+                        </div>
+                        <div class="form-group m-bottom-md">
+                            <label>姓名</label>
                             <input type="text" id="name" name="name" class="form-control" required>
                         </div>
                         <div class="form-group m-bottom-md">
-                            <label>模块名称</label>
-                            <input type="text" id="mod" name="module" class="form-control"required>
-                        </div>
-                        <div class="form-group m-bottom-md">
-                            <label>控制器名</label>
-                            <input type="text" id="con" name="controller" class="form-control" required>
-                        </div>
-                        <div class="form-group m-bottom-md">
-                            <label>操作名称</label>
-                            <input type="text" id="act" name="action" class="form-control" required>
+                            <label>角色</label>
+                            <select id="role" name="role_id" class="form-control" required>
+                                <option value="">请选择...</option>
+                                <foreach name="role" item="vo">
+                                    <option value="<{$vo.id}>"><{$vo.name}></option>
+                                </foreach>
+                            </select>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -167,6 +168,13 @@
         $('#sure-del-btn').attr('href','__CONTROLLER__/del/id/'+$id);
         $('#del-mb').modal();
     }
+    $('.change-btn').click(function () {
+        $('#id').val($(this).data('id'));
+        $('#name').val($(this).data('name'));
+        $('#user').val($(this).data('user'));
+        $('#role').val($(this).data('role'));
+        $('#upd-mb').modal();
+    });
 </script>
 </body>
 </html>
