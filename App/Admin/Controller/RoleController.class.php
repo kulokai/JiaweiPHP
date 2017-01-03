@@ -93,7 +93,7 @@ class RoleController extends AdminController {
 		}
 
 		//节点权限
-		$RodeNode = M('RodeNode');
+		$RodeNode = M('RoleNode');
 		$rn = $RodeNode->where(array('role_id'=>$id))->select();
 		$isNode = array();
 		foreach($rn as $vo){
