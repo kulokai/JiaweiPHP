@@ -36,7 +36,7 @@
             <b>用户组节点</b> <a class="btn btn-success btn-sm">全选</a>
             <hr>
             <foreach name="node" key="k" item="vo">
-                <div class="item">
+                <div class="item <if condition="$vo.checked eq 2">red-border</if>">
                     <input id="cb<{$k}>" name="node[]" value="<{$vo.id}>" type="checkbox" <if condition="$vo.checked eq 1">checked="checked"</if>><label for="cb<{$k}>"> <{$vo.name}>
                     <br><{$vo.module}>/<b class="text-danger"><{$vo.controller}></b>/<{$vo.action}></label>
                 </div>
