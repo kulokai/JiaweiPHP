@@ -48,7 +48,6 @@ class MenuController extends AdminController {
 		}
 		$Menu = D('Menu');
 		$data = $Menu->create();
-		dump($data);
 		if($data['type']==1){
 			unset($data['parent_id']);
 		}
