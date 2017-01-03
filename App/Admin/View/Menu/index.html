@@ -126,14 +126,14 @@
                 <div class="modal-body">
                     <div class="form-group m-bottom-md">
                         <label>菜单级数</label>
-                        <select name="type" class="form-control type_sel">
+                        <select id="type" name="type" class="form-control type_sel">
                             <option value="1">一级菜单</option>
                             <option value="2">二级菜单</option>
                         </select>
                     </div>
                     <div class="form-group m-bottom-md parent_sel" style="display: none">
                         <label>父级菜单</label>
-                        <select name="parent_id" class="form-control">
+                        <select id="parent_id" name="parent_id" class="form-control">
                             <foreach name="menux" item="vo">
                                 <option value="<{$vo.id}>"><{$vo.name}></option>
                             </foreach>
@@ -141,19 +141,20 @@
                     </div>
                     <div class="form-group m-bottom-md">
                         <label>菜单名称</label>
+                        <input type="hidden" id="id" name="id">
                         <input type="text" id="name" name="name" class="form-control" placeholder="菜单名称" required>
                     </div>
                     <div class="form-group m-bottom-md">
                         <label>菜单图标</label>
-                        <input type="text" name="icon" class="form-control" placeholder="菜单图标" value="star" required>
+                        <input type="text" id="icon" name="icon" class="form-control" placeholder="菜单图标" value="star" required>
                     </div>
                     <div class="form-group m-bottom-md">
                         <label>跳转节点</label>
-                        <input type="text" name="url" class="form-control" placeholder="节点" required>
+                        <input type="text" id="url" name="url" class="form-control" placeholder="节点" required>
                     </div>
                     <div class="form-group m-bottom-md">
                         <label>菜单排序</label>
-                        <input type="text" name="sort" class="form-control" placeholder="排序" value="0">
+                        <input type="text" id="sort" name="sort" class="form-control" placeholder="排序" value="0">
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -181,6 +182,13 @@
     });
 
     $('.change-btn').click(function () {
+        $('#type').val($(this).data('type'));
+        $('#id').val($(this).data('id'));
+        $('#parent_id').val($(this).data('parent_id'));
+        $('#name').val($(this).data('name'));
+        $('#icon').val($(this).data('icon'));
+        $('#url').val($(this).data('url'));
+        $('#sort').val($(this).data('sort'));
         $('#upd-mb').modal();
     });
 </script>
