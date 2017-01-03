@@ -87,7 +87,47 @@ class RoleController extends AdminController {
 	}
 
 	public function save($id){
-		dump($_POST);
+		$node = array();
+		foreach($_POST['node'] as $vo){
+			$node[] = $vo;
+		}
+
+		//节点权限
+		$RodeNode = M('RodeNode');
+		$rn = $RodeNode->where(array('role_id'=>$id))->select();
+		$isNode = array();
+		foreach($rn as $vo){
+			$isNode[] = $vo['node_id'];
+		}
+		$new = array_diff($node,$isNode);
+		$delete = array_diff($isNode,$node);
+
+		$RodeNode->startTrans();
+		if($delete){
+			$res1 = $RodeNode->where(array('role_id'=>$id,'func_id'=>array('in',$delete)))->delete();
+			if(!$res1){
+				$RodeNode->rollback();
+				$this->error('node删除错误');
+			}
+		}
+		if($new){
+			$insert = array();
+			foreach($new as $vo){
+				$insert[] = array('role_id'=>$id,'node_id'=>$vo);
+			}
+			$res2 = $RodeNode->addAll($insert);
+			if(!$res2){
+				$RodeNode->rollback();
+				$this->error('f新增错误');
+			}
+		}
+
+
+
+
+		$RodeNode->commit();
+		$this->success('保存成功');
+
 	}
 
 }
