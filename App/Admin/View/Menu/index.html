@@ -141,7 +141,7 @@
                     </div>
                     <div class="form-group m-bottom-md">
                         <label>菜单名称</label>
-                        <input type="text" name="name" class="form-control" placeholder="菜单名称" required>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="菜单名称" required>
                     </div>
                     <div class="form-group m-bottom-md">
                         <label>菜单图标</label>
@@ -172,6 +172,7 @@
 <include file="Public/h/js.html"/>
 <script>
     $('.type_sel').change(function () {
+        alert($(this).index());
         if($(this).val()==1){
             $('.parent_sel').hide();
         }else{
